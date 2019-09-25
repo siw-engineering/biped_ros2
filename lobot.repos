@@ -1,0 +1,9 @@
+repositories:
+  pohzhiee/lobot_control_main:
+    type: git
+    url: https://github.com/pohzhiee/lobot_control_main.git
+    version: master
+  pohzhiee/lobot_description_ros2:
+    type: git
+    url: https://github.com/pohzhiee/lobot_description_ros2.git
+    version: master
