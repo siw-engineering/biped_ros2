@@ -1,13 +1,13 @@
 repositories:
-  pohzhiee/desired_joint_publisher:
+  desired_joint_publisher:
     type: git
     url: https://github.com/pohzhiee/desired_joint_publisher.git
     version: master
-  pohzhiee/robot_state_publisher:
+  robot_state_publisher:
     type: git
     url: https://github.com/pohzhiee/robot_state_publisher.git
     version: dashing
-  ros/joint_state_publisher:
+  joint_state_publisher:
     type: git
     url: https://github.com/ros/joint_state_publisher.git
     version: ros2-devel
