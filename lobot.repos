@@ -2,8 +2,8 @@ repositories:
   lobot_control_main:
     type: git
     url: https://github.com/pohzhiee/lobot_control_main.git
-    version: master
+    version: v0.1.0
   lobot_description_ros2:
     type: git
     url: https://github.com/pohzhiee/lobot_description_ros2.git
-    version: master
+    version: v0.1.0

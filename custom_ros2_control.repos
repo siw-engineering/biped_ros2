@@ -2,32 +2,32 @@ repositories:
   parameter_server_interfaces:
     type: git
     url: https://github.com/pohzhiee/parameter_server_interfaces.git
-    version: master
+    version: v0.1.0
   ros2_control:
     type: git
     url: https://github.com/pohzhiee/ros2_control.git
-    version: dashing_update2
+    version: v0.1.0
   ros2_control_gazebo:
     type: git
     url: https://github.com/pohzhiee/ros2_control_gazebo.git
-    version: master
+    version: v0.1.0
   ros2_control_helpers:
     type: git
     url: https://github.com/pohzhiee/ros2_control_helpers.git
-    version: master
+    version: v0.1.0
   ros2_control_interfaces:
     type: git
     url: https://github.com/pohzhiee/ros2_control_interfaces.git
-    version: master
+    version: v0.1.0
   ros2_controllers:
     type: git
     url: https://github.com/pohzhiee/ros2_controllers.git
-    version: dashing_update
+    version: v0.1.0
   ros2_control_parameter_server:
     type: git
     url: https://github.com/pohzhiee/ros2_control_parameter_server.git
-    version: master
+    version: v0.1.0
   ros2_control_robot:
     type: git
     url: https://github.com/pohzhiee/ros2_control_robot.git
-    version: master
+    version: v0.1.0
