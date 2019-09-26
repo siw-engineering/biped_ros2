@@ -29,7 +29,7 @@ source /usr/share/gazebo-9/setup.sh
 
 # Running
 1. Open terminal and run `rosbiped`
-2. Run `ros2 launch lobot_control_main launch_all_debug.launch.py
+2. Run `ros2 launch lobot_control_main launch_all_debug.launch.py`
 
 # OpenAI Gym
 Refer to [here](https://github.com/pohzhiee/biped_gym)
