@@ -16,8 +16,9 @@ cd ~/biped_ros2
 mkdir src
 vcs import src < custom_ros2_control.repos
 vcs import src < lobot.repos
+vcs import src < debugging_tools.repos
 ```
-Note: if `vcs not found` error occured, try installing the development tools from the 2nd link in step 1. If it still doesn't work, try `pip3 install vcstool`.
+Note: if `vcs not found` error occured, try installing the development tools from the step 2. If it still doesn't work, try `pip3 install vcstool`.
 
 6. Add the following lines to ~/.bashrc
 ```bash
@@ -29,4 +30,10 @@ source /usr/share/gazebo-9/setup.sh
 
 # Running
 1. Open terminal and run `rosbiped`
-2. Run `ros2 launch lobot_control_main launch_all_debug.launch.py`
+2. Run `ros2 launch lobot_control_main launch_all_debug.launch.py
+
+# OpenAI Gym
+Refer to [here](https://github.com/pohzhiee/biped_gym)
+
+# Notes
+1. There is currently a bug where the controllers and the robot plugins do not discover each other quickly enough. This causes the robot to seem like it is not controlled when it is spawned. You might need to wait for some time before they discover each other and the robot move into a fixed position. This bug is partially beyond our control as some of it has to do with the discovery mechanism of the ROS publisher/subscribers.`
