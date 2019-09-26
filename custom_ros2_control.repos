@@ -1,8 +1,4 @@
 repositories:
-  gazebo_ros_pkgs:
-    type: git
-    url: https://github.com/pohzhiee/gazebo_ros_pkgs.git
-    version: dashing
   parameter_server_interfaces:
     type: git
     url: https://github.com/pohzhiee/parameter_server_interfaces.git
