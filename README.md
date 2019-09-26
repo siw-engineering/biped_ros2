@@ -25,7 +25,12 @@ alias rosbiped='source ~/biped_ros2/install/setup.bash'
 alias rosdashing='source /opt/ros/dashing/setup.bash'
 source /usr/share/gazebo-9/setup.sh
 ```
-7. Build the project. Run the command `rosdashing` and then `colcon build` in the **~/biped_ros2** directory
+7. Build the project. 
+```
+cd ~/biped_ros`
+rosdashing
+colcon build
+```
 
 # Running
 1. Open terminal and run `rosbiped`
