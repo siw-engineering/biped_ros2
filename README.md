@@ -10,8 +10,7 @@
 `sudo apt install libyaml-cpp-dev ros-dashing-gazebo*`
 5. Download the relevant source code
 ```bash
-cd ~
-git clone https://github.com/siw-engineering/biped_ros2
+git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
 cd ~/biped_ros2
 mkdir src
 vcs import src < custom_ros2_control.repos
