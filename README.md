@@ -25,6 +25,7 @@ alias rosbiped='source ~/biped_ros2/install/setup.bash'
 alias rosdashing='source /opt/ros/dashing/setup.bash'
 source /usr/share/gazebo-9/setup.sh
 ```
+Note: remember to restart your terminal after changing `~/.bashrc`. Alternatively you can run `source ~/.bashrc` to use the new bashrc config.
 7. Build the project. 
 ```
 cd ~/biped_ros`
@@ -34,7 +35,7 @@ colcon build
 
 # Running
 1. Open terminal and run `rosbiped`
-2. Run `ros2 launch lobot_control_main launch_all_debug.launch.py`
+2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py`
 
 # OpenAI Gym
 Refer to [here](https://github.com/pohzhiee/biped_gym)
