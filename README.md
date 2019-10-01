@@ -7,7 +7,7 @@
 `sudo apt install gazebo9 libgazebo9-dev`
 
 4. Install other dependencies 
-`sudo apt install libyaml-cpp-dev ros-dashing-gazebo*`
+`sudo apt install libyaml-cpp-dev ros-dashing-python-qt-binding ros-dashing-gazebo*`
 5. Download the relevant source code
 ```bash
 git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
