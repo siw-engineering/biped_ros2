@@ -35,7 +35,8 @@ colcon build
 
 # Running
 1. Open terminal and run `rosbiped`
-2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py`
+2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py` to run the biped (representing a lobot h3p)
+3. Run `ros2 launch arm_simulation debug_launch_all.launch.py` to run the RRR robotic arm
 
 # OpenAI Gym
 Refer to [here](https://github.com/pohzhiee/biped_gym)
