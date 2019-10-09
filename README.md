@@ -28,7 +28,7 @@ source /usr/share/gazebo-9/setup.sh
 Note: remember to restart your terminal after changing `~/.bashrc`. Alternatively you can run `source ~/.bashrc` to use the new bashrc config.
 7. Build the project. 
 ```
-cd ~/biped_ros`
+cd ~/biped_ros2
 rosdashing
 colcon build
 ```
