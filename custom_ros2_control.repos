@@ -2,7 +2,7 @@ repositories:
   parameter_server_interfaces:
     type: git
     url: https://github.com/pohzhiee/parameter_server_interfaces.git
-    version: v0.2.0
+    version: 0.3
   ros2_control:
     type: git
     url: https://github.com/pohzhiee/ros2_control.git
@@ -10,12 +10,12 @@ repositories:
   ros2_control_gazebo:
     type: git
     url: https://github.com/pohzhiee/ros2_control_gazebo.git
-    version: v0.2.0
+    version: 0.3
   ros2_control_interfaces:
     type: git
     url: https://github.com/pohzhiee/ros2_control_interfaces.git
-    version: v0.2.0
+    version: 0.3
   ros2_control_parameter_server:
     type: git
     url: https://github.com/pohzhiee/ros2_control_parameter_server.git
-    version: v0.2.0
+    version: 0.3

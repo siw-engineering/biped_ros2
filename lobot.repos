@@ -2,8 +2,12 @@ repositories:
   lobot_simulation:
     type: git
     url: https://github.com/pohzhiee/lobot_simulation.git
-    version: v0.2.0
+    version: 0.3
   lobot_description_ros2:
     type: git
     url: https://github.com/pohzhiee/lobot_description_ros2.git
-    version: v0.2.0
+    version: 0.3
+  arm_simulation:
+    type: git
+    url: https://github.com/pohzhiee/arm_simulation.git
+    version: master
