@@ -1,0 +1,49 @@
+repositories:
+  parameter_server_interfaces:
+    type: git
+    url: https://github.com/pohzhiee/parameter_server_interfaces.git
+    version: 0.3
+  ros2_control:
+    type: git
+    url: https://github.com/pohzhiee/ros2_control.git
+    version: dashing_update2
+  ros2_control_gazebo:
+    type: git
+    url: https://github.com/pohzhiee/ros2_control_gazebo.git
+    version: 0.3
+  ros2_control_interfaces:
+    type: git
+    url: https://github.com/pohzhiee/ros2_control_interfaces.git
+    version: 0.3
+  ros2_control_parameter_server:
+    type: git
+    url: https://github.com/pohzhiee/ros2_control_parameter_server.git
+    version: 0.3
+  lobot_simulation:
+    type: git
+    url: https://github.com/pohzhiee/lobot_simulation.git
+    version: 0.3
+  lobot_description_ros2:
+    type: git
+    url: https://github.com/pohzhiee/lobot_description_ros2.git
+    version: 0.3
+  arm_simulation:
+    type: git
+    url: https://github.com/pohzhiee/arm_simulation.git
+    version: master
+  geometry2:
+    type: git
+    url: https://github.com/pohzhiee/geometry2.git
+    version: ros2
+  desired_joint_publisher:
+    type: git
+    url: https://github.com/pohzhiee/desired_joint_publisher.git
+    version: 0.3
+  robot_state_publisher:
+    type: git
+    url: https://github.com/pohzhiee/robot_state_publisher.git
+    version: dashing
+  joint_state_publisher:
+    type: git
+    url: https://github.com/pohzhiee/joint_state_publisher.git
+    version: ros2-devel

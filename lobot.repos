@@ -11,3 +11,7 @@ repositories:
     type: git
     url: https://github.com/pohzhiee/arm_simulation.git
     version: master
+  geometry2:
+    type: git
+    url: https://github.com/pohzhiee/geometry2.git
+    version: ros2

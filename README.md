@@ -13,9 +13,7 @@
 git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
 cd ~/biped_ros2
 mkdir src
-vcs import src < custom_ros2_control.repos
-vcs import src < lobot.repos
-vcs import src < debugging_tools.repos
+vcs import src < main.repos
 ```
 Note: if `vcs not found` error occured, try installing the development tools from the step 2. If it still doesn't work, try `pip3 install vcstool`.
 
@@ -37,6 +35,12 @@ colcon build
 1. Open terminal and run `rosbiped`
 2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py` to run the biped (representing a lobot h3p)
 3. Run `ros2 launch arm_simulation debug_launch_all.launch.py` to run the RRR robotic arm
+
+# Updating
+1. Checkout the updated branch from remote
+2. Run `vcs import src < main.repos` again to update everything
+3. Build the project again
+4. Run
 
 # OpenAI Gym
 Refer to [here](https://github.com/pohzhiee/biped_gym)
