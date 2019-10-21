@@ -31,9 +31,9 @@ repositories:
     type: git
     url: https://github.com/pohzhiee/arm_simulation.git
     version: master
-  geometry2:
+  orocos_kinematics_dynamics:
     type: git
-    url: https://github.com/pohzhiee/geometry2.git
+    url: https://github.com/pohzhiee/orocos_kinematics_dynamics.git
     version: ros2
   desired_joint_publisher:
     type: git
@@ -47,3 +47,11 @@ repositories:
     type: git
     url: https://github.com/pohzhiee/joint_state_publisher.git
     version: ros2-devel
+  openai_ros2:
+    type: git
+    url: https://github.com/siw-engineering/openai_ros2.git
+    version: master
+  arm_fk_cpp:
+    type: git
+    url: https://github.com/pohzhiee/arm_fk_cpp.git
+    version: master
