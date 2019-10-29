@@ -8,12 +8,14 @@
 
 4. Install other dependencies 
 `sudo apt install libyaml-cpp-dev ros-dashing-python-qt-binding ros-dashing-gazebo*`
-5. Download the relevant source code
+5. Download the relevant source code. The optional repositories are mainly for URDF development
+as well as the development of binaries of utility libraries.
 ```bash
 git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
 cd ~/biped_ros2
 mkdir src
 vcs import src < main.repos
+(optional) vcs import src < optional.repos
 ```
 Note: if `vcs not found` error occured, try installing the development tools from the step 2. If it still doesn't work, try `pip3 install vcstool`.
 
@@ -24,6 +26,7 @@ alias rosdashing='source /opt/ros/dashing/setup.bash'
 source /usr/share/gazebo-9/setup.sh
 ```
 Note: remember to restart your terminal after changing `~/.bashrc`. Alternatively you can run `source ~/.bashrc` to use the new bashrc config.
+
 7. Build the project. 
 ```
 cd ~/biped_ros2
@@ -31,19 +34,23 @@ rosdashing
 colcon build
 ```
 
-# Running
+# Running (arm)
+1. Open terminal and run `rosbiped`
+2. Run `ros2 launch arm_simulation debug_launch_all.launch.py` to run the RRR robotic arm
+
+# Running (biped)
 1. Open terminal and run `rosbiped`
 2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py` to run the biped (representing a lobot h3p)
-3. Run `ros2 launch arm_simulation debug_launch_all.launch.py` to run the RRR robotic arm
+
 
 # Updating
-1. Checkout the updated branch from remote
-2. Run `vcs import src < main.repos` again to update everything
-3. Build the project again
+1. Checkout and pull the updated branch from remote
+2. Run `vcs import src < main.repos` again to update the main repositories
+3. Build the project again (`colcon build`)
 4. Run
 
-# OpenAI Gym
-Refer to [here](https://github.com/pohzhiee/biped_gym)
+# OpenAI Gym Integration
+Refer to [here](https://github.com/siw-engineering/openai_ros2)
 
 # Notes
-1. There is currently a bug where the controllers and the robot plugins do not discover each other quickly enough. This causes the robot to seem like it is not controlled when it is spawned. You might need to wait for some time before they discover each other and the robot move into a fixed position. This bug is partially beyond our control as some of it has to do with the discovery mechanism of the ROS publisher/subscribers.`
+The biped stuff are not tested from version 0.3 onwards. Might not work properly. 
