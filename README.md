@@ -2,6 +2,8 @@
 
 1 .  To install ros2 and other dependencies.
 ```
+git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
+cd ~/biped_ros2
 bash biped_ros2_install.sh
 ```
 2 . Once install is finished, close the current terminal and open a new one
