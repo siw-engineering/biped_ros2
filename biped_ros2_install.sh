@@ -32,8 +32,6 @@ sudo apt install gazebo9 libgazebo9-dev
 sudo apt install libyaml-cpp-dev ros-dashing-python-qt-binding ros-dashing-gazebo*
 echo "source /usr/share/gazebo-9/setup.sh" >> ~/.bashrc
 
-git clone https://github.com/siw-engineering/biped_ros2 ~/biped_ros2
-cd ~/biped_ros2
 mkdir src
 vcs import src < main.repos
 
