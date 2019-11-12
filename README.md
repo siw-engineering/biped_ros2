@@ -6,6 +6,7 @@ bash biped_ros2_install.sh
 ```
 2 . Once install is finished, close the current terminal and open a new one
 ```
+cd ~/biped_ros2
 rosdashing
 colcon build
 ```
