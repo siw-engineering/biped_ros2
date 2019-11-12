@@ -1,4 +1,17 @@
 # Installation
+
+1 .  To install ros2 and other dependencies.
+```
+bash biped_ros2_install.sh
+```
+2 . Once install is finished, close the current terminal and open a new one
+```
+rosdashing
+colcon build
+```
+    
+## Alternatively
+
 1. Install ros2 dashing following the instructions [here](https://index.ros.org//doc/ros2/Installation/Dashing/Linux-Install-Debians/)
 
 2. Install ros2 development tools following the section named **Install development tools and ROS tools** listed [here](https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Development-Setup/)
@@ -35,11 +48,11 @@ colcon build
 ```
 
 # Running (arm)
-1. Open terminal and run `rosbiped`
+1. Open new terminal and run `rosdashing` and then `rosbiped`
 2. Run `ros2 launch arm_simulation debug_launch_all.launch.py` to run the RRR robotic arm
 
 # Running (biped)
-1. Open terminal and run `rosbiped`
+1. Open new terminal and run `rosdashing` and then `rosbiped`
 2. Run `ros2 launch lobot_simulation debug_launch_all.launch.py` to run the biped (representing a lobot h3p)
 
 
