@@ -34,4 +34,4 @@ repositories:
   openai_ros2:
     type: git
     url: https://github.com/siw-engineering/openai_ros2.git
-    version: 0.6
+    version: 0.6.1

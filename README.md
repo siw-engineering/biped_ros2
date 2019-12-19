@@ -125,7 +125,7 @@ Related discussions [1](https://github.com/pism/pism/issues/356),
 
 ```bash
 cd ~/biped_ros2
-git fetch
+git fetch --tags
 git checkout <version_number> # version_number is something like 0.6
 ```
 
