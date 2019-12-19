@@ -103,6 +103,15 @@ rosdashing
 colcon build --symlink-install
 ```
 
+Note: most likely there will be CMake warning messages like this for libssl and libcrypto
+
+`Cannot generate a safe runtime search path for target`
+
+For now it doesn't impact anything and there is no known solution to us on this issue, so it is ignored.
+If you can help fix this issue please submit a PR or raise an issue to discuss. 
+Related discussions [1](https://github.com/pism/pism/issues/356), 
+[2](https://github.com/introlab/rtabmap_ros/issues/131)
+
 5. Run. Follow normal [run](#running) instructions but with conda environment activated
 
 # Running
@@ -112,11 +121,11 @@ colcon build --symlink-install
 
 
 # Updating
-1. Checkout and pull the updated branch from remote 
+1. Switch to a version of choice (preferably latest) 
 
 ```bash
-git checkout origin/<version_number> # Version number is something like 0.6
-git pull
+git fetch
+git checkout <version_number> # version_number is something like 0.6
 ```
 
 2. Run `vcs import src < main.repos` again to update the main repositories
