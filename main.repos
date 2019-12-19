@@ -6,7 +6,7 @@ repositories:
   ros2_control_gazebo:
     type: git
     url: https://github.com/pohzhiee/ros2_control_gazebo.git
-    version: 0.5
+    version: 0.6
   ros2_control_interfaces:
     type: git
     url: https://github.com/pohzhiee/ros2_control_interfaces.git
@@ -22,16 +22,16 @@ repositories:
   lobot_description_ros2:
     type: git
     url: https://github.com/pohzhiee/lobot_description_ros2.git
-    version: 0.5
+    version: 0.6
   arm_simulation:
     type: git
     url: https://github.com/pohzhiee/arm_simulation.git
-    version: 0.5
+    version: 0.6
   desired_joint_publisher:
     type: git
     url: https://github.com/pohzhiee/desired_joint_publisher.git
-    version: 0.5
+    version: 0.6
   openai_ros2:
     type: git
     url: https://github.com/siw-engineering/openai_ros2.git
-    version: 0.5
+    version: 0.6
