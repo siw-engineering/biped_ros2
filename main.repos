@@ -6,11 +6,11 @@ repositories:
   ros2_control_gazebo:
     type: git
     url: https://github.com/pohzhiee/ros2_control_gazebo.git
-    version: 0.6.7
+    version: 0.6.9
   ros2_control_interfaces:
     type: git
     url: https://github.com/pohzhiee/ros2_control_interfaces.git
-    version: 0.6.7
+    version: 0.6.9
   ros2_control_parameter_server:
     type: git
     url: https://github.com/pohzhiee/ros2_control_parameter_server.git
@@ -34,7 +34,7 @@ repositories:
   openai_ros2:
     type: git
     url: https://github.com/siw-engineering/openai_ros2.git
-    version: 0.6.8
+    version: 0.6.9
   orocos_kinematics_dynamics:
     type: git
     url: https://github.com/pohzhiee/orocos_kinematics_dynamics.git
