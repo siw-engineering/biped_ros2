@@ -4,6 +4,8 @@ on:
     paths:
       - ".docker/*"
       - ".github/workflows/docker.yml"
+    tags:        
+    - 0.6*             # Push events to 0.6 tag
 
 jobs:
   docker:

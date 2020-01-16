@@ -160,13 +160,13 @@ Combined container with option to choose any is still under consideration.
 
 Run the following command in a terminal.
 ```bash
-xhost +local: && \ # This is to allow x11 forwarding
-docker run --net=host --gpus all --privileged --rm \
+xhost +local: && \
+docker run --gpus all --privileged --rm \
   -u=1099 \
   -e DISPLAY=$DISPLAY \
   -e USER=defaultuser \
-  -v "/tmp/.X11-unix:/tmp/.X11-unix" \ # This volume mapping is for x11 forwarding
-  -v "/home/$USER/:/home/$USER/" \ # This volume mapping is for easy transfer of trained model to host computer
+  -v "/tmp/.X11-unix:/tmp/.X11-unix" \
+  -v "/home/$USER/:/home/$USER/" \
   --name=spinningup_container \
   pohzhiee/docker_sims:spinningup \
   python -m spinup.run td3 --env LobotArmContinuous-v2 --exp_name some_experiment
