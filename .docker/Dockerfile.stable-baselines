@@ -1,0 +1,30 @@
+FROM pohzhiee/cudagl_ros2_gazebo:latest
+
+ARG DEBIAN_FRONTEND=noninteractive
+USER defaultuser
+SHELL ["/bin/bash", "-c"]
+
+# Build biped_ros2
+RUN git clone https://github.com/siw-engineering/biped_ros2 /home/defaultuser/biped_ros2
+
+WORKDIR /home/defaultuser/biped_ros2
+RUN mkdir src
+RUN vcs import --recursive src < main.repos
+
+RUN . /opt/ros/dashing/setup.bash \
+    && colcon build
+
+# Create conda virtual environment
+RUN conda create -n conda_env python=3.6 tensorflow-gpu=1.14.0
+
+# Install stable-baselines and relevant dependencies for the simulator
+WORKDIR /home/defaultuser
+RUN source activate conda_env \
+    && pip install stable-baselines==2.9.0
+RUN source activate conda_env \
+    && pip install pybullet catkin-pkg pyyaml==3.12 empy==3.3.2 lark-parser==0.7.2
+    
+COPY entrypoint.sh .
+
+ENTRYPOINT ["/bin/bash", "/home/defaultuser/entrypoint.sh"]
+CMD ["bash"]

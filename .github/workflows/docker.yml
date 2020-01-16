@@ -15,6 +15,7 @@ jobs:
       matrix:
         tag:
           - spinningup
+          - stable-baselines
     steps:
       - uses: actions/checkout@v1
         with:
