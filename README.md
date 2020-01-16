@@ -5,6 +5,7 @@
     - [Conda](#conda)
 3. [Running](#running)
 4. [Updating](#updating)
+5. [Docker](#docker)
 
 # Simple Installation
 1 .  To install ros2 and other dependencies.
@@ -129,7 +130,7 @@ git fetch --tags
 git checkout <version_number> # version_number is something like 0.6
 ```
 
-2. Run `vcs import src < main.repos` again to update the main repositories
+2. Run `vcs import --recursive src < main.repos` again to update the main repositories
 3. Build the project again (`colcon build`)
 4. Run
 
@@ -138,3 +139,53 @@ Refer to [here](https://github.com/siw-engineering/openai_ros2)
 
 # Notes
 The biped stuff are not tested from version 0.3 onwards. Might not work properly. 
+
+# Docker
+
+## Status
+Currently only the spinningup container is available through CD.
+The current implementation requires a GUI, and as such X11 forwarding is necessary to run the containers.
+
+stable-baselines container coming soon.
+
+Headless containers coming soon.
+
+Combined container with option to choose any is still under consideration.
+
+## Prerequisites
+1. Running on an X11 system such as Ubuntu 18.04 using xorg
+2. [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+
+## Running
+
+Run the following command in a terminal.
+```bash
+xhost +local: && \ # This is to allow x11 forwarding
+docker run --net=host --gpus all --privileged --rm \
+  -u=1099 \
+  -e DISPLAY=$DISPLAY \
+  -e USER=defaultuser \
+  -v "/tmp/.X11-unix:/tmp/.X11-unix" \ # This volume mapping is for x11 forwarding
+  -v "/home/$USER/:/home/$USER/" \ # This volume mapping is for easy transfer of trained model to host computer
+  --name=spinningup_container \
+  pohzhiee/docker_sims:spinningup \
+  python -m spinup.run td3 --env LobotArmContinuous-v2 --exp_name some_experiment
+```
+
+## Notes
+### Not enough privilege for `docker run`
+  - Run it with sudo, however this is not tested and as such the behaviour is not known
+
+### Transferring trained model to host computer. 
+1. If the training is not yet started, you can map the data output directory to your host through adding another -v flag. 
+For example, if the data in the container is being saved to 
+`/home/defaultuser/spinningup/data/some_experiment/some_experiment_s0/`, 
+add 
+`-v /home/$USER/host_data_dir:/home/defaultuser/spinningup/data/some_experiment/some_experiment_s0/` as one of the run arguments
+
+
+2. If the training has already started and no volumes other than X11 and home directories are mapped
+  - Run `docker exec -it spinningup_container /bin/bash`
+  - Once inside the docker container, run `cp` command to copy from `/home/defaultuser/<some_path_to_data>` to `/home/<your_username>/<some_folder>`
+  - Example: `sudo cp -r /home/defaultuser/spinningup/data/some_experiment/some_experiment_s0 /home/pohzhiee/advasdkvn/`
+  - Run `exit` to exit the container shell

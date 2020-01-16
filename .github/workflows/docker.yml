@@ -1,0 +1,35 @@
+name: Docker Images
+on:
+  push:
+    paths:
+      - ".docker/*"
+      - ".github/workflows/docker.yml"
+
+jobs:
+  docker:
+    name: 'pohzhiee/docker_sims:${{ matrix.tag }}'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag:
+          - spinningup
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          ref: master
+
+      - name: Build
+        env:
+          TAG: ${{ matrix.tag }}
+        run: |
+          cd .docker/
+          docker build -t pohzhiee/docker_sims:${TAG} \
+            -f Dockerfile.${TAG} .
+      - name: Login
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: echo ${DOCKER_PASSWORD} | docker login --username ${DOCKER_USERNAME} --password-stdin
+
+      - name: Push
+        run: docker push pohzhiee/docker_sims:${{ matrix.tag }}
