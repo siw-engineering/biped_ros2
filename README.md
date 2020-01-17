@@ -227,10 +227,18 @@ add
 
 
 2. If the training has already started and no volumes other than X11 and home directories are mapped
-  - Run `docker exec -it spinningup_container /bin/bash`
-  - Once inside the docker container, run `cp` command to copy from `/home/defaultuser/<some_path_to_data>` to `/home/<your_username>/<some_folder>`
-  - Example: `sudo cp -r /home/defaultuser/spinningup/data/some_experiment/some_experiment_s0 /home/pohzhiee/advasdkvn/`
-  - Run `exit` to exit the container shell
+    - Run `docker exec -it spinningup_container /bin/bash`
+    - Once inside the docker container, run `cp` command to copy from `/home/defaultuser/<some_path_to_data>` to `/home/<your_username>/<some_folder>`
+    - Example: `sudo cp -r /home/defaultuser/spinningup/data/some_experiment/some_experiment_s0 /home/pohzhiee/advasdkvn/`
+    - Run `exit` to exit the container shell
 
-3. Uploading to cloud server
-  - Still under consideration, currently not supported
+3. Playing it safe (in case you forgot to map volume and the container shuts down before you can transfer anything)
+    - Run without the `--rm` flag
+    - After the container shuts down, check that the container still exists by running `docker container ls -a`
+    - If the container still exists, run `docker start -a -i <container_name>` to start the container again (with previous data intact)
+    - Note that this will run the training again, so try to copy the data before it gets overwritten
+    - Run `docker exec -it <container_name> /bin/bash` to access the shell of the container
+    - See how to copy in 2)
+    - Because the container is still intact even after training ends, you will need to explicitly remove it through `docker container rm <container_name` before trying to create another container of the same name
+4. Uploading to cloud server
+    - Still under consideration, currently not supported
