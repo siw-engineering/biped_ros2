@@ -23,6 +23,7 @@ RUN source activate conda_env \
     && pip install stable-baselines==2.9.0
 RUN source activate conda_env \
     && pip install pybullet catkin-pkg pyyaml==3.12 empy==3.3.2 lark-parser==0.7.2
+RUN source activate conda_env && pip install psutil mpi4py
     
 COPY entrypoint.sh .
 
