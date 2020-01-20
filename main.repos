@@ -34,7 +34,7 @@ repositories:
   openai_ros2:
     type: git
     url: https://github.com/siw-engineering/openai_ros2.git
-    version: 0.6.9
+    version: 0.6.11
   orocos_kinematics_dynamics:
     type: git
     url: https://github.com/pohzhiee/orocos_kinematics_dynamics.git
